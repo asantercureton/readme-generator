@@ -1,5 +1,15 @@
 // ARRANGE
+const fs = require('fs');
 const inquirer = require('inquirer');
+
+const outputREADME = (readMe) => {
+    fs.writeFile('README.md', readMe, (err) => {
+        if (err) console.log(err);
+        console.log('Success');
+    })
+};
+
+
 // ACTION (Pure Functions)
 function init() {
     inquirer.prompt([
@@ -76,7 +86,7 @@ function init() {
                 if (your_contributing) {
                     return true;
                 }   else {
-                    console.log('Provide contribution details for your project');
+                    console.log('Provide instructions for making contributions to your project');
                     return false;
                 }
             }
@@ -126,29 +136,42 @@ function init() {
                 }
             }
         },
+        {
+            type: 'input',
+            message: 'What is your email address?',
+            name: 'email',
+            validate: your_email => {
+                if (your_email) {
+                    return true;
+                }   else {
+                    console.log('Provide your email address');
+                    return false;
+                }
+            }
+        },
     ]).then(({title, description, installation, instructions, usage, contributing, test, license, gitHub}) => {
         // title, description, installation, instructions, usage, contributing, test, license, gitHub
-        const titleTemplate = renderTitle(title);
-        const descriptionTemplate = renderDescription(description);
-        const installationTemplate = renderInstallation(installation);
-        const instructionsTemplate = renderInstructions(instructions);
-        const usageTemplate = renderUsage(usage);
-        const contributingTemplate = renderContributing(contributing);
-        const testTemplate = renderTest(test);
-        const licenseTemplate = renderLicense(license);
-        const gitHubTemplate = renderGitHub(gitHub);
-        const baseTemplate = renderBaseTemplate(
-            titleTemplate,
-            descriptionTemplate,
-            installationTemplate,
-            instructionsTemplate,
-            usageTemplate,
-            contributingTemplate,
-            testTemplate,
-            licenseTemplate,
-            gitHubTemplate,
-        );
-    })
-};
+//         const titleTemplate = renderTitle(title);
+//         const descriptionTemplate = renderDescription(description);
+//         const installationTemplate = renderInstallation(installation);
+//         const instructionsTemplate = renderInstructions(instructions);
+//         const usageTemplate = renderUsage(usage);
+//         const contributingTemplate = renderContributing(contributing);
+//         const testTemplate = renderTest(test);
+//         const licenseTemplate = renderLicense(license);
+//         const gitHubTemplate = renderGitHub(gitHub);
+//         const baseTemplate = renderBaseTemplate(
+//             titleTemplate,
+//             descriptionTemplate,
+//             installationTemplate,
+//             instructionsTemplate,
+//             usageTemplate,
+//             contributingTemplate,
+//             testTemplate,
+//             licenseTemplate,
+//             gitHubTemplate,
+//         );
+//     })
+// };
 // WRITE FILE
 // CALL ON FUNCTION
