@@ -6,23 +6,20 @@ README Generator
 
 
 ## Description
-Designed a scheduler to add important events to a daily planner.
+Designed a professional README Generator that generates a concise README file outlining the key points andfeatures of the user's project using command-line prompts.
 
 ## Links
-[Source Code](https://github.com/asantercureton/work-day-scheduler)
-
-
-[Description Link](https://asantercureton.github.io/work-day-scheduler/)
+[Source Code](https://github.com/asantercureton/readme-generator)
 
 
 ## Usage
-Presents user with a button to start the quiz and stores their highscore using localStorage once completed. Users will have a timed limit to complete the quiz and every incorrect answer deducts time from the remaining time left. Time is saved has a score and are viewable via the highscore link.
+Designed to receive prompted inputs via command-line and output the resposnes into a concise display with project details.
 
 
 ## Screenshots
 Below is a screenshot of the project:
 
-![Image of html](./assets/images/scheduler.jpg)
+![Image of html](./assets/images/readme-gen.jpg)
 
 ---
-© 2021 Work Day Scheduler.
+© 2021 Professional README Generator.
