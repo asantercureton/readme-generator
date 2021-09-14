@@ -1,4 +1,6 @@
-# This works
+# h !(https://img.shields.io/badge/license-BSD-blue.svg)
+## Description
+h
 ## Table Of Contents
 [Instructions](#instructions)
 
@@ -12,18 +14,16 @@
 
 [GitHub](#gitHub)
 ## Installation
-install
+h
 ## Instructions
-follow instr
+h
 ## Usage
-easy
+g
 ## Contributing
-email me
+g
 ## Test
-email me
+g
 ## License
-![GitHub license](https://img.shields.io/badge/license-ISC-blue.svg)
-## Description
-details here
+![GitHub license](https://img.shields.io/badge/license-BSD-blue.svg)
 ## GitHub Username
-github.com
+g

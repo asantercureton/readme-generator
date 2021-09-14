@@ -9,10 +9,9 @@ const outputREADME = (readMe) => {
     })
 };
 
-
 // ACTION
-const renderTitle = (title) => {
-    return `# ${title}`
+const renderTitle = (title, license) => {
+    return `# ${title} ![GitHub license](https://img.shields.io/badge/license-${license}-blue.svg)`
 };
 
 const renderDescription = (description) => {
@@ -72,7 +71,6 @@ ${gitHub}`
 
 const renderBaseTemplate = (
     titleTemplate,
-    licenseTemplate,
     descriptionTemplate,
     tableOfContentsTemplate,
     installationTemplate,
@@ -80,6 +78,7 @@ const renderBaseTemplate = (
     usageTemplate,
     contributingTemplate,
     testTemplate,
+    licenseTemplate,
     gitHubTemplate,
     ) => {
     return `${titleTemplate}
@@ -235,7 +234,7 @@ var questions = [{
 inquirer.prompt(questions)
 .then(({ title, description, installation, instructions, usage, contributing, test, license, gitHub }) => {
     // title, description, installation, instructions, usage, contributing, test, license, gitHub
-    const titleTemplate = renderTitle(title);
+    const titleTemplate = renderTitle(title, license);
     const descriptionTemplate = renderDescription(description);
     const tableOfContentsTemplate = renderTableOfContents();
     const installationTemplate = renderInstallation(installation);
